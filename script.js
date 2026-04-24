@@ -256,7 +256,7 @@ async function sendMessage() {
 
   // Step 3: show typing indicator then wait random.uniform(10, 30) seconds
   addTypingIndicator();
-  await sleep(randomUniformMs(3, 7));
+  await sleep(randomUniformMs(1, 3));
 
   // Step 4 & 5: safe_generate with None fallback (mirrors Python)
   const raw = await safeGenerate(messages);
