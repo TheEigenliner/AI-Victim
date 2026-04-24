@@ -355,3 +355,25 @@ html, body {
 .chat__send-btn:not(:disabled):active {
   transform: scale(0.93);
 }
+
+
+/* Media Handeling */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+  }
+
+  .sidebar--left {
+    display: none;
+  }
+
+  .sidebar--right {
+    display: none;
+  }
+
+  .chat {
+    height: 100vh;
+  }
+}
