@@ -1,0 +1,357 @@
+/* =====================
+   RESET & BASE
+   ===================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+  background: #16161d;
+  color: white;
+  font-size: 14px;
+}
+
+/* =====================
+   LAYOUT
+   ===================== */
+.layout {
+  display: grid;
+  grid-template-columns: 230px 1fr 200px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* =====================
+   SIDEBARS
+   ===================== */
+.sidebar {
+  background: #16161d;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.sidebar--left {
+  border-right: 1px solid #e0e0e5;
+}
+
+.sidebar--right {
+  border-left: 1px solid #e0e0e5;
+}
+
+.sidebar__heading {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.sidebar__section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar__section p {
+  font-size: 12px;
+  color: white;
+  line-height: 1.6;
+}
+
+.sidebar__section p strong {
+  font-weight: 600;
+  color: white;
+}
+
+.sidebar__section ul {
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sidebar__section li {
+  font-size: 12px;
+  color: white;
+  line-height: 1.5;
+}
+
+.sidebar__divider {
+  height: 1px;
+  background: #16161d;
+}
+
+.sidebar__note {
+  font-size: 11px;
+  color: white;
+  line-height: 1.55;
+}
+
+/* =====================
+   STATS
+   ===================== */
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.stat__label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #8e8e93;
+}
+
+.stat__value {
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.1;
+}
+
+.stat__sub {
+  font-size: 11px;
+  color: white;
+}
+
+/* =====================
+   RESET BUTTON
+   ===================== */
+.btn-reset {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #d1d1d6;
+  border-radius: 10px;
+  background: rgb(109, 3, 3);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+  text-align: center;
+}
+
+.btn-reset:hover {
+  background: #ff0000;
+}
+
+/* =====================
+   CHAT COLUMN
+   ===================== */
+.chat {
+  display: flex;
+  flex-direction: column;
+  background: #16161d;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header */
+.chat__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e0e0e5;
+  background: #262633;
+  flex-shrink: 0;
+}
+
+.chat__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #34c759;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chat__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chat__name {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+
+.chat__status {
+  font-size: 11px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34c759;
+  display: inline-block;
+}
+
+/* Messages area */
+.chat__messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  scroll-behavior: smooth;
+}
+
+/* Empty state */
+.empty-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  font-size: 13px;
+  text-align: center;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.empty-state__icon {
+  font-size: 32px;
+  opacity: 0.5;
+}
+
+/* Message rows */
+.msg-row {
+  display: flex;
+  width: 100%;
+}
+
+.msg-row--left {
+  justify-content: flex-start;
+}
+
+.msg-row--right {
+  justify-content: flex-end;
+}
+
+/* Bubbles */
+.bubble {
+  max-width: 65%;
+  padding: 9px 13px;
+  font-size: 14px;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+/* Scammer (user) — left, dark gray */
+.bubble--user {
+  background: #e5e5ea;
+  color: #1c1c1e;
+  border-radius: 18px 18px 4px 18px;
+}
+
+/* Eileen (AI) — right, iMessage blue */
+.bubble--ai {
+  background: #007aff;
+  color: #ffffff;
+  border-radius: 18px 18px 18px 4px;
+}
+
+/* Typing indicator bubble */
+.bubble--typing {
+  background: #e5e5ea;
+  color: #8e8e93;
+  border-radius: 18px 18px 4px 18px;
+  font-size: 12px;
+  font-style: italic;
+  opacity: 0.55;
+}
+
+/* =====================
+   INPUT AREA
+   ===================== */
+.chat__input-area {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid #e0e0e5;
+  background: #16161d;
+  flex-shrink: 0;
+}
+
+.chat__textarea {
+  flex: 1;
+  border: 1px solid #d1d1d6;
+  border-radius: 20px;
+  padding: 9px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  max-height: 100px;
+  min-height: 38px;
+  line-height: 1.4;
+  background: #16161d;
+  color: white;
+  transition: border-color 0.15s;
+}
+
+.chat__textarea:focus {
+  border-color: #007aff;
+  background: #16161d;
+}
+
+.chat__send-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #007aff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.chat__send-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+.chat__send-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.chat__send-btn:not(:disabled):hover {
+  opacity: 0.85;
+}
+
+.chat__send-btn:not(:disabled):active {
+  transform: scale(0.93);
+}

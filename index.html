@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eileen Dover  — Scam Baiter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- LEFT SIDEBAR: Info -->
+    <aside class="sidebar sidebar--left">
+      <div class="sidebar__section">
+        <h3 class="sidebar__heading">About</h3>
+        <p>This tool uses an AI persona named <strong>Eileen Dover (I Leaned Over)</strong> to respond to scammers and waste their time — a practice known as <em>scam baiting</em>.</p>
+      </div>
+
+      <div class="sidebar__section">
+        <h3 class="sidebar__heading">How to use</h3>
+        <ul>
+          <li>Type your scam message as if you are a real scammer</li>
+          <li>Eileen will respond naturally to stall and waste time</li>
+          <li>Keep the conversation going as long as possible</li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <h3 class="sidebar__heading">Eileen's tactics</h3>
+        <ul>
+          <li>Asks who you are before engaging</li>
+          <li>Requests repetition or clarification</li>
+          <li>Gives information slowly and incompletely</li>
+          <li>Feigns confusion at key steps</li>
+          <li>Always stalls before any final action</li>
+        </ul>
+      </div>
+
+      <div class="sidebar__section">
+        <h3 class="sidebar__heading">Try these</h3>
+        <ul>
+          <li>Fake parcel delivery fee</li>
+          <li>Bank account suspended</li>
+          <li>Tax refund owed</li>
+          <li>Prize winner notice</li>
+          <li>Tech support virus alert</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MIDDLE: Chat -->
+    <main class="chat">
+
+      <div class="chat__header">
+        <div class="chat__avatar">ED</div>
+        <div class="chat__contact">
+          <span class="chat__name">Eileen Dover</span>
+          <span class="chat__status"><span class="status-dot"></span>mobile</span>
+        </div>
+      </div>
+
+      <div class="chat__messages" id="messages">
+        <div class="empty-state" id="empty-state">
+          <p class="empty-state__icon">💬</p>
+          <p>Send a message to begin.<br>Eileen is waiting.</p>
+        </div>
+      </div>
+
+      <div class="chat__input-area">
+        <textarea
+          id="msg-input"
+          class="chat__textarea"
+          placeholder="Type a message…"
+          rows="1"
+        ></textarea>
+        <button id="send-btn" class="chat__send-btn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"/>
+            <polyline points="5 12 12 5 19 12"/>
+          </svg>
+        </button>
+      </div>
+
+    </main>
+
+    <!-- RIGHT SIDEBAR: Controls & Stats -->
+    <aside class="sidebar sidebar--right">
+      <div class="sidebar__section">
+        <h3 class="sidebar__heading">Controls</h3>
+        <button id="reset-btn" class="btn-reset">Reset conversation</button>
+      </div>
+
+      <div class="sidebar__divider"></div>
+
+      <div class="sidebar__section">
+        <h3 class="sidebar__heading">Session stats</h3>
+
+        <div class="stat">
+          <span class="stat__label">Messages sent</span>
+          <span class="stat__value" id="stat-msgs">0</span>
+          <span class="stat__sub">scammer messages</span>
+        </div>
+
+        <div class="stat">
+          <span class="stat__label">Time wasted</span>
+          <span class="stat__value" id="stat-time">0:00</span>
+          <span class="stat__sub">minutes elapsed</span>
+        </div>
+      </div>
+
+      <div class="sidebar__divider"></div>
+
+      <div class="sidebar__section">
+        <h3 class="sidebar__heading">Note</h3>
+        <p class="sidebar__note">This is a a simulation and not intended to be used for actual scam baiting.</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
